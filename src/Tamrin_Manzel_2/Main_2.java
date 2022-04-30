@@ -183,26 +183,20 @@ public class Main_2 {
                                         break;
                                     }
                                     case "5" -> {
-                                        System.out.println("++++++++++++++++++++++++++++++");
                                         PreparedStatement preparedStatement5 =
                                                 connection.prepareStatement("update PERSON_EDIT set EMAIL = ? where NAME = ?");
-                                        System.out.println("++++++++++++++++++++++++++++++");
                                         preparedStatement5.setString(1, txtData.getText());
                                         preparedStatement5.setString(2, txtName.getText());
-                                        System.out.println("++++++++++++++++++++++++++++++");
                                         try {
                                             preparedStatement5.executeUpdate();
                                         }catch (Exception e3) {
 
                                             e3.printStackTrace();
                                         }
-                                        System.out.println("++++++++++++++++++++++++++++++");
                                         connection.setAutoCommit(false);
-                                        System.out.println("++++++++++++++++++++++++++++++");
                                         connection.commit();
                                         preparedStatement5.close();
                                         connection.close();
-                                        System.out.println("-----------------------------");
                                         break;
                                     }
                                 }
